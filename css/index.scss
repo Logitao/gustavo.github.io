@@ -1,0 +1,134 @@
+html body {
+  margin: 20px;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@keyframes fadeInDown {
+  0% {
+    transform: rotate(0) translateY(-70%);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeScale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.25;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+@mixin spaceOut {
+  margin-bottom: 80px;
+}
+
+.paddingtop {
+  padding-top: 30px;
+}
+
+body {
+  background: linear-gradient(-360deg, #0e398d, #3d7df9);
+  font-family: 'Montserrat';
+  color: #fff;
+}
+
+$paddingLR: 28px;
+$paddingTB: 10px;
+$buttonborderradius: 75.5px;
+$gridwidth: 177px;
+$buttonborderstroke: 1.5px;
+$centeringoffsetnav: 200px;
+a {
+  width: 160px;
+  white-space: nowrap;
+  border: $buttonborderstroke solid #ffffff;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: $buttonborderradius;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  padding: $paddingTB $paddingLR $paddingTB $paddingLR;
+  &.fill {
+    background: #fff;
+    color: #3168d1;
+  }
+}
+
+.section-headline {
+  text-align: center;
+  margin-bottom: 150px;
+  hr {
+    display: inline-block;
+    width: 28%;
+  }
+  h2 {
+    display: inline;
+    margin: 0 30px 0 30px;
+  }
+}
+
+nav {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, $gridwidth) auto;
+    grid-column-gap: 30px;
+    list-style: none;
+    justify-content: end;
+  }
+  margin-bottom: $centeringoffsetnav;
+}
+
+main {
+  text-align: center;
+  display: block;
+  .headline {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  div {
+    @include spaceOut();
+  
+  }
+  a {
+    width: 17%;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 21px;
+    @include spaceOut();
+  }
+  margin-bottom: 500px;
+}
+
+#projetos {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  img {
+    width: 91%;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
