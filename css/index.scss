@@ -111,7 +111,6 @@ main {
   }
   div {
     @include spaceOut();
-  
   }
   a {
     width: 17%;
@@ -120,7 +119,7 @@ main {
     font-size: 21px;
     @include spaceOut();
   }
-  margin-bottom: 500px;
+  margin-bottom: 700px;
 }
 
 #projetos {
